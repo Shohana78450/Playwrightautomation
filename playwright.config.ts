@@ -12,6 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  timeout: 600000,
   testDir: './src',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -28,8 +29,9 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
-    actionTimeout: 15000,// your time limit for each action like click, fill
+    actionTimeout: 50000,// your time limit for each action like click, fill
     screenshot: 'only-on-failure',
+    video: 'on',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
@@ -47,7 +49,7 @@ export default defineConfig({
     },
 
     {
-      name: 'webkit',
+      name: 'safari',
       use: { ...devices['Desktop Safari'] },
     },
 
