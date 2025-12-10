@@ -11,7 +11,10 @@
     "bingTestCB": "npx playwright test src/test/Day1_112525/T1_Bing_Search.spec.ts --headed --workers=1 --project=firefox --project=Chrome project=safari --reporter=html",
     "uspsParallel": "npx playwright test src/test/Day3_120225/T1_USPS_Multiple_Tests.spec.ts --headed --workers=2 --project=Chrome --reporter=html",
     "uspsParallelCB": "npx playwright test src/test/Day3_120225/T1_USPS_Multiple_Tests.spec.ts --headed --workers=4 --project=Chrome --project=firefox --reporter=html",
-   "bingReusable": "npx playwright test src/test/Day4_120825/bing_search_reuseable.spec.ts --headed --workers=1 --project=chrome --reporter=html"
+   "bingReusable": "npx playwright test src/test/Day4_120825/bing_search_reuseable.spec.ts --headed --workers=1 --project=chrome --reporter=html",
+   "bingReusableall": "npx playwright test src/*.spec.ts --headed --workers=1 --project=chrome --reporter=html"
+    
+
 
 
   },
